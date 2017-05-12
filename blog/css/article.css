@@ -77,59 +77,10 @@ h5{
     font-size: 14px;
     font-family: "Source Code Pro",sans-serif;
     margin: -7px auto;
+    line-height: 1.8;
     word-break:break-all;
     overflow:hidden;
     padding: 0px 5px;
     border: 1px solid #ddd;
     border-left: 2px solid #666666;
-}
-
-.info{
-    width: 220px;
-    height: 80px;
-    color: #666666;
-    background: #FFFFFF;
-    font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
-    font-size: 16px;
-    letter-spacing:0.1em;
-    text-align: left;
-    line-height: 1.8;
-    float: left;
-}
-
-.log{
-    width: 220px;
-    height: 80px;
-    background: #666666;
-    color: #FFFFFF;
-    font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
-    font-size: 30px;
-    letter-spacing:0.1em;
-    text-shadow: #FFFFFF 0px 0px 6px;
-    box-shadow: #FFFFFF 2px 2px 6px;
-    text-align: center;
-    line-height: 1.8;
-    position: relative;
-}
-
-.li{
-    width: 220px;
-    height: 35px;
-    background: #FFFFFF;
-    color: #666666;
-    font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
-    text-align: center;
-    line-height: 1.8;
-    font-size: 16px;
-    position: relative;
-}
-.li a{
-    width: 220px;
-    height: 35px;
-    color: #666;
-    display: block;
-    transition:all 0.2s ;
-}
-.li a:hover{
-    background: #f9f9f9;
 }

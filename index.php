@@ -15,6 +15,7 @@ include 'access/write_log.php';
     <title>Here</title>
     <?echo getHead(0);?>
     <link href="blog/css/article.css" type="text/css" rel="stylesheet"/>
+    <link href="index/home.css" type="text/css" rel="stylesheet"/>
 </head>
 <body bgcolor="#f1f1f1">
 <script src="index/canvas-nest.min.js"></script>
@@ -22,21 +23,21 @@ include 'access/write_log.php';
     <br>
     <br>
     <br>
-        <div class="info" style="position:fixed;margin:1% 0;left: calc(30% - 200px);"><!--information-->
+        <div class="info" style="position:fixed;margin:1% 0;left: calc(30% - 220px);"><!--information-->
             <div class="log">Vee<div style="font-size: 15px;">发现美，而不是坚持。</div></div>
             <div class="li"><a href="#">访问数:<?homeCount();echo getLateCount();?></a></div>
             <div class="li"><a href="api/wordcloud/">个性标签</a></div>
         </div>
 </div>
     <div><!--page-->
-        <!--<ul style="list-style-type: none;">
-            <li class="page">
+        <ul class="abstract">
                 <?
-                #include dirname(__FILE__).'/blog/function/Home.php';
-                #echo getHome();
+                include dirname(__FILE__).'/blog/function/Home.php';
+                echo getHome();
                 ?>
-            </li>
-   </p></ul>-->
+   </p></ul>
+
+
     </div>
     <br>
     <br>

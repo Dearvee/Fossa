@@ -11,20 +11,27 @@ function getId(){
     $filename=dirname(__FILE__).'/../data/home.txt';
     $homeArticleId=file_get_contents($filename);
     $homeArticleId=explode("\r\n",$homeArticleId);
-    return $homeArticleId;
+    $homeInfo=array();
+    for($i=0;$i<count($homeArticleId);$i++){
+        $homeInfo[$i]=array();
+        $Info=explode("*",$homeArticleId[$i]);
+        $homeInfo[$i]['href']=$Info[0];
+        $homeInfo[$i]['title']=$Info[1];
+        $homeInfo[$i]['time']=$Info[2];
+    }
+    return $homeInfo;
 }
 
-function toHome($articleId){
+function toHome($href,$title,$time){
     $filename=dirname(__FILE__).'/../data/home.txt';
-    file_put_contents($filename,$articleId,FILE_APPEND);
+    file_put_contents($filename,"\r\n".$href."*".$title."*".$time,FILE_APPEND);
 }
 
 function getHome(){
-    $homeId=getId();
-    count($homeId);
+    $homeInfo=getId();
     $home="";
-    for($i=0;$i<count($homeId);$i++){
-        $home=$home."<a href='"."blog/p/".$homeId[$i].".html'>".$homeId[$i]."</a>";
+    for($i=0;$i<count($homeInfo);$i++){
+        $home=$home."<li class='abs'><a href='"."blog/p/".$homeInfo[$i]['href'].".html'>".$homeInfo[$i]['title']."</a><span>".$homeInfo[$i]['time']."</span></p><li><br></li>";
     }
     return $home;
 }
