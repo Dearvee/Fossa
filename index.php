@@ -13,7 +13,7 @@ include 'access/write_log.php';
 <html style="overflow-x:hidden;">
 <head>
     <title>Here</title>
-    <?echo getHead(0);?>
+    <?#echo getHead(0);?>
     <link href="blog/css/article.css" type="text/css" rel="stylesheet"/>
     <link href="index/home.css" type="text/css" rel="stylesheet"/>
 </head>

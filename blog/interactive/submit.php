@@ -21,9 +21,10 @@ $sql="INSERT INTO article(title,text,time)
 $mysqli->query($sql);
 $mysqli->close();
 echo $time.'article submit successful~';
+include '../function/str_to.php';
 include '../function/articleToHtml.php';
 include '../function/Home.php';
-$href=buildHtmlFile($title,$time,$_GET['text']);#build html file
+$href=buildHtmlFile($title,$time,str_to_html($_GET['text']));#build html file
 if ($index){
     toHome($href,$title,$time);                              #write to home.txt
 }
