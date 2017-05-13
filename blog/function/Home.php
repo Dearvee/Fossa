@@ -30,7 +30,7 @@ function toHome($href,$title,$time){
 function getHome(){
     $homeInfo=getId();
     $home="";
-    for($i=0;$i<count($homeInfo);$i++){
+    for($i=count($homeInfo)-1;$i>=0;$i--){
         $home=$home."<li class='abs'><a href='"."blog/p/".$homeInfo[$i]['href'].".html'>".$homeInfo[$i]['title']."</a><span>".$homeInfo[$i]['time']."</span></p><li><br></li>";
     }
     return $home;
