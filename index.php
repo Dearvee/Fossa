@@ -16,6 +16,7 @@ include 'access/write_log.php';
     <?#echo getHead(0);?>
     <link href="blog/css/article.css" type="text/css" rel="stylesheet"/>
     <link href="index/home.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="index/upRunTime.js"></script>
 </head>
 <body bgcolor="#f1f1f1">
 <script src="index/canvas-nest.min.js"></script>
@@ -42,7 +43,8 @@ include 'access/write_log.php';
     <br>
     <br>
     <br>
-</div>
+
+<? include 'index/runTime.php';echo $runTime;?>
 <? include 'index/footer.php';echo $footer;?>
 </body>
 </html>
