@@ -7,8 +7,6 @@
  */
 $mysqli=new mysqli("localhost","root","dearvee1996","blog");
 $sql="SELECT * FROM article";
-//$mysqli=new mysqli("162.251.93.27","a0421211704","dearvee1996","a0421211704");
-//$sql="SELECT * FROM blog_article";
 $mysqli->query("set character_set_results=utf8");
 $result=$mysqli->query($sql);
 $titles=array();
