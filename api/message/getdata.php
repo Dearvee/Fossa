@@ -7,8 +7,6 @@
  */
 $mysqli=new mysqli("localhost","root","dearvee1996","message_board_db");
 $sql="SELECT * FROM message_info";
-//$mysqli=new mysqli("162.251.93.27","a0421211704","dearvee1996","a0421211704");
-//$sql="SELECT * FROM message_board_info";
 $mysqli->query("set character_set_results=utf8");
 $result=$mysqli->query($sql);
 $messages=array();
